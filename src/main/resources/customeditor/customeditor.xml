@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="weddingInvitation" class="com.sun.spring.customeditor.WeddingInvitation" >
+       <property name="boyName" value="Ranvir"></property>
+       <property name="girlName" value="Dipeka"></property>
+       <property name="date" value="10-07-2018"> </property>
+    </bean>
+    
+    <!-- Solution 1 Starts-->
+    <bean id="dateParser" class="java.text.SimpleDateFormat">
+      <constructor-arg value="yyyy-MM-dd"></constructor-arg> 
+    </bean>
+    
+    <!-- bean id="weddingInvitation1" class="com.sun.spring.customeditor.WeddingInvitation" >
+       <property name="boyName" value="Ranvir"></property>
+       <property name="girlName" value="Dipeka"></property>
+       <property name="date"> 
+         <bean factory-bean="dateParser" factory-method="parse">
+          <constructor-arg value="2018-0-10-10"></constructor-arg>
+         </bean>
+       </property>
+    </bean-->
+    <!-- Solution 1 End-->
+    
+    
+    	
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+	    <property name="propertyEditorRegistrars">
+	        <list>
+	            <bean class="com.sun.spring.customeditor.MyCustomDateEditor"/>
+	        </list>
+	    </property>
+    </bean> 	
+    	
+    
+</beans>

@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bar" class="com.sun.spring.cnamespace.Bar"/>
+    <bean id="baz" class="com.sun.spring.cnamespace.Baz"/>
+
+    <!-- traditional declaration -->
+    <!-- bean id="foo" class="com.sun.spring.cnamespace.Foo">
+        <constructor-arg ref="bar"/>
+        <constructor-arg ref="baz"/>
+        <constructor-arg value="foo@bar.com"/>
+    </bean-->
+
+    <!-- c-namespace declaration -->
+    <bean id="foo" class="com.sun.spring.cnamespace.Foo" c:bar-ref="bar" c:baz-ref="baz" c:email="foo@bar.com"/>
+
+
+    <!-- Compound property names
+     We Can use compound or nested property names when you set bean properties,
+     as long as all components of the path except the final property name are not null
+     
+     Example : 
+     <bean id="foo" class="foo.Bar">
+	    <property name="fred.bob.sammy" value="123" />
+	</bean>
+     
+      -->
+   
+
+
+</beans>

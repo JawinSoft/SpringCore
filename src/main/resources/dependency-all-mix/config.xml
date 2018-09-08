@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!-- Spring treats empty arguments for properties and the like as empty Strings
+       The following XML-based configuration metadata snippet sets the email property to the empty String value ("") -->
+	  <!-- bean id="bean" class="com.sun.spring.exnull.ExampleBean">
+	    <property name="email" value=""/>
+	  </bean-->
+
+   <!-- The <null/> element handles null values. 
+     The below	 configuration is equivalent to exampleBean.setEmail(null);-->
+    <!-- bean id="bean" class="com.sun.spring.exnull.ExampleBean">
+	    <property name="email">
+	    <null></null>
+	    </property>
+	  </bean-->
+ 
+    <!-- XML shortcut with the p-namespace
+    xmlns:p="http://www.springframework.org/schema/p" add at  -->
+    <bean name="p-namespace" class="com.sun.spring.exnull.ExampleBean"
+        p:email="foo@bar.com"/>
+
+</beans>

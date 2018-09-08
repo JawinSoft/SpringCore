@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- This Section Also Covers about Lazy Init. Describe Lazy Init -->
+    
+	<bean id="collectionExample" class="com.sun.spring.collections.CollectionExample" lazy-init="true">
+		<!-- results in a setAdminEmails(java.util.Properties) call -->
+		<property name="properties">
+			<props>
+				<prop key="objectCount">3</prop>
+			</props>
+		</property>
+
+		<property name="list">
+			<list>
+				<value>String1</value>
+				<value>String2</value>
+				<value>String3</value>
+				<value>String4</value>
+				<value>String5</value>
+			</list>
+		</property>
+
+		<!-- results in a setSomeMap(java.util.Map) call -->
+		<property name="someMap">
+			<map>
+				<entry key="entry1" value="value1" />
+				<entry key="entry2" value="vaue2" />
+			</map>
+		</property>
+		<!-- results in a setSomeSet(java.util.Set) call -->
+		<property name="someSet">
+			<set>
+				<value>just some string</value>
+			</set>
+		</property>
+
+	</bean>
+
+</beans>
