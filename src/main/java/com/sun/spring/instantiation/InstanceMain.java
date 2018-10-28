@@ -7,7 +7,7 @@ public class InstanceMain {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("instantiation/instance-factory-config.xml");
-		MySingleton obj = context.getBean("mySingleton",MySingleton.class);
+		StatiFactoryDemo obj = context.getBean("statiFactoryDemo",StatiFactoryDemo.class);
  		System.out.println(obj);
  		
  		MyInstanceClass mis = context.getBean("myInstance",MyInstanceClass.class);

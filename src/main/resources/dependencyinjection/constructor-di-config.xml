@@ -10,7 +10,28 @@
    </bean>
 
   <bean id = "service" class="com.sun.spring.dependency.injection.Service">
-      
-   </bean>
+  </bean>
+  
+   <bean id="emp1" class="com.sun.spring.dependency.injection.Employee">
+        <constructor-arg ref="1"/>
+        <constructor-arg ref="SunilManaka"/>
+    </bean>
+    
+    <bean id="emp2" class="com.sun.spring.dependency.injection.Employee">
+      <constructor-arg type="int" value="1"/>
+      <constructor-arg type="java.lang.String" value="SunilManaka"/>
+    </bean>
+    
+    <bean id="emp3" class="com.sun.spring.dependency.injection.Employee">
+       <constructor-arg index="0" value="1"/>
+       <constructor-arg index="1" value="SunilManaka"/>
+     </bean>
+     
+     <!-- @ConstructorProperties({"years", "ultimateAnswer"}) -->
+     <bean id="emp4" class="com.sun.spring.dependency.injection.Employee">
+       <constructor-arg name="empId" value="1"/>
+       <constructor-arg name="empName" value="SunilManaka"/>
+      </bean>
+  
 
 </beans>

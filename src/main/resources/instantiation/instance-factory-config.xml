@@ -5,11 +5,11 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id = "mySingleton" class = "com.sun.spring.instantiation.MySingleton" factory-method="createMySingleton">
+   <bean id = "statiFactoryDemo" class = "com.sun.spring.instantiation.StatiFactoryDemo" factory-method="createStatiFactoryDemo">
       
    </bean>
 
-  <bean id = "myInstance"  factory-method="createMyInstanceClass" factory-bean="mySingleton">
+  <bean id = "myInstance"  factory-method="createMyInstanceClass" factory-bean="statiFactoryDemo">
       
    </bean>
 

@@ -9,17 +9,14 @@ public class LifeCycleByInterface implements InitializingBean,DisposableBean{
 		System.out.println("LifeCycleBeanImpl Constructor Execution");
 	}
 	
-	@Override
 	public void afterPropertiesSet() throws Exception {
 		System.out.println("Executing afterPropertiesSet method");
 	}
 
-	@Override
 	public void destroy() throws Exception {
 		System.out.println("Executing destroy method");
 	}
 	
-	@Override
 	protected void finalize() throws Throwable {
 		System.out.println("Executing finalize method");
 	}

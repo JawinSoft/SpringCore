@@ -1,0 +1,41 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:util="http://www.springframework.org/schema/util"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/util 
+   http://www.springframework.org/schema/util/spring-util.xsd">
+
+   <!-- <context:property-placeholder location="application.properties"/> -->
+
+   
+   
+   <!-- <bean
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	  <property name="locations">
+        <value>classpath:application.properties</value>
+    </property>
+	  
+	  <property name="properties">
+	        <value>
+	            author_name=SunilManaka </value>
+	    </property>
+	     <property name="ignoreUnresolvablePlaceholders" value="true"/>
+	</bean> -->
+
+
+   <!-- <bean
+    class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+      <property name="locations">
+        <value>classpath:application.properties</value>
+    </property>
+    </bean> -->
+    
+    <util:properties  id="props" location="classpath:/application.properties" />
+    
+    <context:component-scan base-package="com.sun.spring.properties" />
+    
+</beans>
