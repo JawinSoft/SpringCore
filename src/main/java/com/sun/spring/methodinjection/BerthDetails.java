@@ -2,8 +2,6 @@ package com.sun.spring.methodinjection;
 
 public class BerthDetails {
 	
-	
-
 	public BerthDetails(String userName, int berthNumber, String coachNumber, BirthLevel birthName) {
 		this.userName = userName;
 		this.berthNumber = berthNumber;

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 public class Solution3 {
 	
 	
-	@Bean 
+	@Bean
 	@Scope("prototype")
 	public Printer printer(){
 		return new Printer();

@@ -4,7 +4,7 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
- <bean id="parent" class="com.sun.spring.inheritance.Amitabh" abstract="true">
+ <bean id="parent" class="com.sun.spring.inheritance.Amitabh">
    <property name="profession" value="Acting"></property>
    <property name="assests" value="100Crore"></property>
    <property name="name" value="Amitabh Bachan"></property>

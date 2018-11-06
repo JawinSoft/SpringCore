@@ -13,8 +13,8 @@
   </bean>
   
    <bean id="emp1" class="com.sun.spring.dependency.injection.Employee">
-        <constructor-arg ref="1"/>
-        <constructor-arg ref="SunilManaka"/>
+        <constructor-arg value="1"/>
+        <constructor-arg value="SunilManaka"/>
     </bean>
     
     <bean id="emp2" class="com.sun.spring.dependency.injection.Employee">
@@ -23,8 +23,8 @@
     </bean>
     
     <bean id="emp3" class="com.sun.spring.dependency.injection.Employee">
-       <constructor-arg index="0" value="1"/>
-       <constructor-arg index="1" value="SunilManaka"/>
+        <constructor-arg index="1" value="SunilManaka"/>
+        <constructor-arg index="0" value="1"/>
      </bean>
      
      <!-- @ConstructorProperties({"years", "ultimateAnswer"}) -->

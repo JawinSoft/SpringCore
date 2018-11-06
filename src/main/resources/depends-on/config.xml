@@ -6,11 +6,7 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
 
-   <bean id="company" class="com.sun.spring.lifecycle.LifeCycleByInterface" init-method="init"
-     destroy-method="destroyByXml">
-   </bean>
-   
-   <context:annotation-config></context:annotation-config>
-   
-   
+   <context:component-scan base-package="com.sun.spring.dependson"/>
+
+
 </beans>

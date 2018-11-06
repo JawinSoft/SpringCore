@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public abstract class Solution2 {
 
 

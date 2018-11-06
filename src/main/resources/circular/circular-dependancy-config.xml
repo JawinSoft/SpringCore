@@ -6,22 +6,24 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
    <!-- Circular Dependency resolution using Setter Dependency Injection -->
-   <!--bean id = "serviceProvider" class = "com.sun.spring.circular.ServiceProvider">
+   <bean id="serviceProvider" class = "com.sun.spring.circular.ServiceProvider">
        <property name="pp" ref="paymentprocesser" />
    </bean>
-  <bean id = "paymentprocesser" class="com.sun.spring.circular.PaymentProcesser">
+   
+  <bean id="paymentprocesser" class="com.sun.spring.circular.PaymentProcesser">
       <property name="sp" ref="serviceProvider" />
-   </bean-->
+  </bean>
    
    
-   
-   <!-- Circular Dependency resolution using Constructor Dependency Injection -->
-   <bean id = "serviceProvider" class = "com.sun.spring.circular.ServiceProvider">
+   <!--  Circular Dependency resolution using Constructor Dependency Injection -->
+  <!-- <bean id = "serviceProvider" class = "com.sun.spring.circular.ServiceProvider">
        <constructor-arg ref="paymentprocesser" />
    </bean>
+   
   <bean id = "paymentprocesser" class="com.sun.spring.circular.PaymentProcesser">
       <constructor-arg ref="serviceProvider" />
-   </bean>
+   </bean> -->
+   
    
 
 </beans>

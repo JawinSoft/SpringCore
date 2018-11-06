@@ -5,8 +5,8 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <!-- This Section Also Covers about Lazy Init. Describe Lazy Init -->
-    
-	<bean id="collectionExample" class="com.sun.spring.collections.CollectionExample" lazy-init="true">
+    <bean id="collectionExample" class="com.sun.spring.collections.CollectionExample">
+		
 		<!-- results in a setAdminEmails(java.util.Properties) call -->
 		<property name="properties">
 			<props>
@@ -31,6 +31,7 @@
 				<entry key="entry2" value="vaue2" />
 			</map>
 		</property>
+		
 		<!-- results in a setSomeSet(java.util.Set) call -->
 		<property name="someSet">
 			<set>

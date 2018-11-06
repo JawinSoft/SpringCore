@@ -10,5 +10,11 @@ public class JavaConfig {
 	public BeanPostProcessorDemo beanPostProcessorDemo(){
 		return new BeanPostProcessorDemo();
 	}
+	
+	
+	@Bean(initMethod="init")
+	public HelloWorld helloWorld(){
+		return new HelloWorld();
+	}
 
 }

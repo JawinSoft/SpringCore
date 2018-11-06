@@ -5,8 +5,7 @@ import java.util.concurrent.Callable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-//@Component
-//@Scope("prototype")
+
 public class Printer implements Callable<String>{
 	
 	private BerthDetails berthDetails;

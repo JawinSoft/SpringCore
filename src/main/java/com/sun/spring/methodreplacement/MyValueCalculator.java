@@ -6,4 +6,5 @@ public class MyValueCalculator {
       return "My Value is Zero Here ";
     }
 
+	//10 methods
 }

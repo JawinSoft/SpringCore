@@ -9,22 +9,26 @@
    http://www.springframework.org/schema/util 
    http://www.springframework.org/schema/util/spring-util.xsd">
 
-   <!-- <context:property-placeholder location="application.properties"/> -->
+   <context:component-scan base-package="com.sun.spring.properties" /> 
 
+   <!-- <context:property-placeholder location="application.properties"/>  -->
    
    
    <!-- <bean
     class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	  setLocations
 	  <property name="locations">
-        <value>classpath:application.properties</value>
-    </property>
-	  
+	        <value>classpath:application.properties</value>
+	   </property>
+	   
+	   setProperties
 	  <property name="properties">
 	        <value>
-	            author_name=SunilManaka </value>
+	            author_name=AnilKumar 
+	           </value>
 	    </property>
-	     <property name="ignoreUnresolvablePlaceholders" value="true"/>
-	</bean> -->
+	    <property name="ignoreUnresolvablePlaceholders" value="true"/>
+   </bean>  -->
 
 
    <!-- <bean
@@ -34,8 +38,8 @@
     </property>
     </bean> -->
     
-    <util:properties  id="props" location="classpath:/application.properties" />
+  <!--  <util:properties  id="props" location="classpath:/application.properties" /> -->
     
-    <context:component-scan base-package="com.sun.spring.properties" />
+    
     
 </beans>
